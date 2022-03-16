@@ -11,31 +11,36 @@
     <header class="header-wrap">   
         <div class="header-top">
           <img src="svg/noemi-logo.svg" class="header-logo" alt= "логотип сайта">          
-          </d>
-          <nav class="menu">  
-            <ul class="menu-list">
-              <li class="menu-list-item">
-                <a class="menu-link" href="#0">главная</a>
-              </li> 
-              <li class="menu-list-item">
-                <a class="menu-link" href="#0">посты</a>
-              </li>
-              <li class="menu-list-item">
-                <a class="menu-link" href="#0">статьи</a>
-              </li>
-              <li class="menu-list-item">
-                <a class="menu-link" href="#0">теги</a>
-              </li>
-              <li class="menu-list-item">
-                <a class="menu-link" href="#0">темы</a>
-              </li>
-              <li class="menu-list-item">
-                <a class="menu-link" href="#0">контакты</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
+            <nav class="menu">  
+              <ul class="menu-list">
+                <li class="menu-list-item">
+                  <a class="menu-link" href="#0">главная</a>
+                </li> 
+                <li class="menu-list-item">
+                  <a class="menu-link" href="#0">посты</a>
+                </li>
+                <li class="menu-list-item">
+                  <a class="menu-link" href="#0">статьи</a>
+                </li>
+                <li class="menu-list-item">
+                  <a class="menu-link" href="#0">теги</a>
+                </li>
+                <li class="menu-list-item">
+                  <a class="menu-link" href="#0">темы</a>
+                </li>
+                <li class="menu-list-item">
+                  <a class="menu-link" href="#0">контакты</a>
+                </li>
+              </ul>
+              <div class="menu-navicon"> 
+                <button class="menu-navicon-button" type="button">
+                  <span class="menu-navicon-button-label">кнопка меню</span>
+                </button>
+              </div>
+            </nav>
+        </div>        
         <div class="header-title">
+          <img src="svg/noemi-logo.svg" class="header-logo-mobile" alt="логотип сайта">
           <h1>блог о творчестве, спорте, и образе жизни</h1>
         </div>     
     </header> 
@@ -101,7 +106,8 @@
         </article>
       </div>
     </section>
-    <div class="page-wrap">
+    <div class="page-wrap"> 
+    <div class="main-wrap">
         <main class="main">
           <article class="card">
             <div class="card-preview">  
@@ -404,13 +410,17 @@
               </ul>
           </section>         
         </aside> 
-        <section class="shop"> 
+    </div>
+    <section class="shop"> 
           <h2 class="section-title">наши изделия</h2>
           <div class="shop-container">
             <div class="shop-card">
-              <div class="shop-card-image">
-                <img src="images/shop-item-desk1.jpg" alt="Фотография подушки на стуле">
-              </div>
+              <picture class="shop-card-image">
+                <source srcset="images/shop-item-mobile1.jpg" media="(max-width: 640px)">
+                <source srcset="images/shop-item-tablet1.jpg" media="(max-width: 1199px)">
+                <source srcset="images/shop-item-desk1.jpg" media="(min-width: 1200px)">
+                <img class="shop-card-image" src="images/shop-item-desk1.jpg" alt="Фотография подушки на стуле">
+              </picture>              
               <div class="shop-card-content">
                 <h3 class="shop-card-content-title">
                   подушки на диван
@@ -436,16 +446,19 @@
                 </div>
               </div>
             </div>
-            <div class="shop-card">
-              <div class="shop-card-image">
-                <img src="images/shop-item-desk2.jpg" alt="Фотография куклы зайчик">
-              </div>
+            <div class="shop-card">  
+              <picture class="shop-card-image">
+                <source srcset="images/shop-item-mobile2.jpg" media="(max-width: 640px)">
+                <source srcset="images/shop-item-tablet2.jpg" media="(max-width: 1199px)">
+                <source srcset="images/shop-item-desk2.jpg" media="(min-width: 1200px)">
+                <img class="shop-card-image" src="images/shop-item-desk2.jpg" alt="Фотография куклы зайчик">
+              </picture>
               <div class="shop-card-content">
                 <h3 class="shop-card-content-title">
                   кукла "зайчик"
                 </h3>
                 <p class="shop-card-content-features">
-                  Интерьерная рукодельная кукла "Зайчик", созданию которой посвящена
+                  Интерьерная рукодельная кукла "Зайчик", созданию которой посвящена 
                   <a class="shop-card-content-features-link" href="#0">весенняя серия постов</a>
                  в блоге и несколько подкастов
                 </p>
@@ -463,9 +476,12 @@
               </div>
             </div>
             <div class="shop-card">
-              <div class="shop-card-image">
-                <img src="images/shop-item-desk3.jpg" alt="Фотография подушки на стуле">
-              </div>
+              <picture class="shop-card-image">
+                <source srcset="images/shop-item-mobile3.jpg" media="(max-width: 640px)">
+                <source srcset="images/shop-item-tablet3.jpg" media="(max-width: 1199px)">
+                <source srcset="images/shop-item-desk3.jpg" media="(min-width: 1200px)">
+                <img class="shop-card-image" src="images/shop-item-desk3.jpg" alt="Фотография шестиугольной рамки">
+              </picture>
               <div class="shop-card-content">
                 <h3 class="shop-card-content-title">
                   шестиугольная рамка
@@ -492,8 +508,8 @@
               </div>
             </div>
           </div>
-        </section>        
-        <footer class="footer">
+    </section>        
+    <footer class="footer">
           <address class="socials-wrap"> 
             <ul class="socials">   
                 <li class="socials-item"> 
@@ -525,9 +541,8 @@
             </ul>        
           </address>
           <a class="copyright" href="#0">Copyright © 2009–2019 City Blog LLC.</a>   
-        </footer>
-    </div> 
-    
+    </footer>
+    </div>
         
       
       
