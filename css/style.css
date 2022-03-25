@@ -430,6 +430,7 @@
     background-repeat: no-repeat;
     background-color:#b59f5b;
     background-position:center;
+    cursor: pointer;
   }
   /*------------Поле рассылка на email в боковой панели -------*/
   .email {
@@ -458,6 +459,7 @@
     font-size: 14px;
     font-weight: bold;
     color: #ffffff;
+    cursor: pointer;
   }
   .hidden-label {
     position: absolute;
@@ -699,7 +701,7 @@
     }
   }
 /*------------------amedia TABLET---------------------*/
-  @media (min-width:641px) and (max-width: 1199px) {
+  @media (min-width:641px) and (max-width: 1199px)  {
     .header-wrap {
       padding-top: 50px;    
       background-image: url("../images/banner-bg-tablet.jpg");  
@@ -727,6 +729,7 @@
     }
     .trends-card {
       width: calc(50% - 3px);
+      padding: 2%;
     }
     .trends-card:nth-child(n+2) {
       margin-left: 0;
@@ -736,6 +739,9 @@
     }
     .trends-card:nth-child(1), .trends-card:nth-child(2) {
       margin-bottom: 5px;
+    }
+    .trends-card-content {
+      padding: 10%;   
     }
     .page-wrap {
       padding: 0 35px;
@@ -754,6 +760,7 @@
 
     .card-content {
       margin-left: 0px;
+      
     }
     .card-content-title, .card-tag, .card-content-meta {
       width: 100%;
@@ -767,10 +774,39 @@
     .shop-card {
       width: 45%;
       margin-bottom: 48px;
+    }   
+  }
+  /*------------------amedia TABLET Landscape--------------------*/
+    @media (orientation: landscape) {
+      .trends-container {
+        display: flex;
+        flex-wrap: nowrap;  
+        width: 100%;  
+        margin-bottom: 63px;
+        
+      }
+    
+      .trends-card {
+        display: flex;
+        width: calc(25% - 5px);
+        min-height: 320px; 
+        padding: 2%;   
+        align-items: flex-end;    
+      }
+    
+      .trends-card:nth-child(n+2) {
+        margin-left: 5px;
+      }
+      .trends-card:nth-child(1), .trends-card:nth-child(2) {
+        margin-bottom: 0px;
+      }
+      .trends-card-content {
+        padding: 10%;      
     }
   }
+  
   /*-------------------amedia MOBILE-------------------*/
-  @media (max-width:640px) {
+  @media (max-width:640px)  {
     .header-wrap {
       min-height: 640px;
       background-image: url("../images/banner-mobile.jpg");
@@ -807,6 +843,7 @@
     }
     .trends-container {
       flex-wrap: wrap;
+      padding: 1.65em;
     }
     .trends-card {
       width: 100%;
@@ -836,6 +873,8 @@
     }
     .trends-card-content {
       flex-grow: 1;
+      padding: 5.5%;
+
     }
     .card-preview {
       width: 100%;
@@ -878,3 +917,177 @@
 
 
   }
+}
+
+/*-------------------amedia MOBILE Landscape-------------------*/
+@media (max-width:640px) and (orientation: landscape) {
+  .trends-container {
+    flex-wrap: wrap;
+    padding: 1.65em;
+  }
+  .trends-card {
+    width: calc(50% - 3px);
+  }
+  .trends-card:nth-child(n+2) {
+    margin-left: 0;
+  }
+  .trends-card:nth-child(even) {
+    margin-left: 5px;
+  }
+  .trends-card:nth-child(1), .trends-card:nth-child(2) {
+    margin-bottom: 5px;
+  }
+}
+
+
+/*-------------POPUP--------------*/
+    
+
+    .popup {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 2;
+      background-color: rgb(0 0 0 /0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+    }
+    .popup-close {
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      color: #eeeeee;
+      top: -30px;
+      right: 5px;
+    }    
+    .popup-card {
+      position: relative;
+      width: 380px;
+      min-height: 500px;
+      max-height: 660px;
+      z-index: 3;
+      background-color: #ffffff;
+      color: #000000;
+      opacity: 0.9999;
+      padding: 50px 30px;
+    }
+    /*----------POPUP INPUT------------*/
+
+    .popup-label-when {
+      font-size: 14px;
+    }
+    .popup-form-when {
+      position: relative;
+    }
+    .popup-input-when {
+      width: 100%;
+      height: 48px;
+      margin-top: 10px;
+      background-color: #f4f7f6;
+      border: none;
+      padding-left: 17px;
+      padding-right: 50px;
+      vertical-align: middle;
+    }
+    .popup-input-when:focus {
+      outline: 2px solid #b59f5b;
+    }
+    .popup-button-when {
+      position: absolute; 
+      top: 47px;
+      right: 10px;
+      border: none;  
+      width: 20px;
+      height: 20px;
+      background-image: url("../svg/form-arrows.svg");
+      background-size: 10px;  
+      background-repeat: no-repeat;      
+      background-position:center;
+      cursor: pointer;
+    }
+
+    /*----------POPUP RADIO------------*/
+
+    .popup-email {
+      margin-top: 25px;
+      font-size: 14px;
+    }
+    .popup-form-email {
+      margin-top: 10px;
+    }
+
+    .popup-email-label-yes {
+      padding-left: 30px;
+      vertical-align: middle;
+      
+    }
+    .popup-email-label-no {
+      padding-left: 30px;
+      margin-left: 20px;
+      vertical-align: middle;
+      
+    }
+
+    .popup-email-radio {
+      position: absolute;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none; 
+
+    }
+    .popup-email-radio::after {
+      content: "";
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background-image: url("../svg/form-empty-circle.svg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 20px;
+      vertical-align: middle;
+      margin-left: -30px;
+    
+     
+    }
+    .popup-email-radio:checked::after {
+      background-image: url("../svg/form-circle.svg");
+    }
+    /*----------POPUP TEXTAREA------------*/
+    .popup-question {
+      margin-top: 25px;
+      font-size: 14px;
+    }
+    .popup-textarea-question {
+      width: 100%;
+      height: 150px;
+      resize: none;
+      margin-top: 10px;
+      background-color: #f4f7f6;
+      border: none;
+      padding: 10px;
+      font-family: inherit;
+      font-size: 14px;
+    }
+    .popup-textarea-question:focus {
+      outline: 2px solid #b59f5b;
+    }
+    .popup-question-button {
+    width: 100%;
+    height: 48px;
+    margin-top: 17px;
+    border: none; 
+    background-color:#b59f5b;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    cursor: pointer;
+    }
+    .hidden {
+      display: none;
+    }
+    
