@@ -47,7 +47,6 @@
   .header-top {
     width: 1200px;
     min-height: 60px;
-    width: 100%;
     margin-left: auto;
     margin-right: auto;
     padding: 0 15px;
@@ -537,8 +536,8 @@
   /*----------------Магазин-----------------*/
 .shop {
   max-width: 1170px;
-  margin: 65px auto 0 auto;
-  padding: 0 15px;
+  margin: 60px auto 0 auto;
+  padding: 0 20px;
 }
 .shop-container {
   display: flex;
@@ -550,7 +549,7 @@
   flex-wrap: wrap;
   flex-direction: column;
   align-content: center;
-  width: 30%;  
+  width: 27%;  
 }
 .shop-card-image {
   margin: 0 auto;
@@ -572,9 +571,9 @@
 
 .shop-card-content {
   flex-grow: 1;
-  min-height: 265px;
+  min-height: 220px;
   width: 100%;
-  margin-top: -10px;
+  margin-top: -17px;
   margin-right: 20px;
   margin-left: 20px;
   padding-top: 25px;
@@ -591,7 +590,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  padding-top: 15px;
+  padding-top: 12px;
   
 }
 
@@ -610,6 +609,7 @@
   text-transform: uppercase;
   font-size: 20px;
   font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .shop-footer-button {
@@ -639,7 +639,7 @@
     height: 84px;
     width: 100%;
     background-color: #f4f7f6;
-    margin-top: 65px;
+    margin-top: 85px;
     align-items: center;
     justify-content: center;
     
@@ -655,7 +655,7 @@
     padding: 10px;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 20px;  
+    background-size: 23px;  
       
   }
   .twitter-link {
@@ -703,11 +703,14 @@
 /*------------------amedia TABLET---------------------*/
   @media (min-width:641px) and (max-width: 1199px)  {
     .header-wrap {
-      padding-top: 50px;    
+      min-height: 390px;
+      padding-top: 35px;  
+      margin-bottom: 45px;  
       background-image: url("../images/banner-bg-tablet.jpg");  
     }
 
     .header-top {
+      width: 100%;
       min-width: 641px;
       padding: 0 35px;
     }    
@@ -715,8 +718,13 @@
     .menu-list {
       display: none;
     }  
+    .header-logo {
+      width: 160px;
+     }
     .header-title {
       max-width: 615px;
+      margin-top: 72px;
+      line-height: 1.45;
     }  
     .header-logo-mobile {
       display: none;
@@ -724,12 +732,17 @@
     h1 {
       font-size: 40px;
      }
+    .section-title {
+      padding-bottom: 18px;
+    } 
     .trends-container {
       flex-wrap: wrap;
+      margin-bottom: 50px;
     }
     .trends-card {
       width: calc(50% - 3px);
       padding: 2%;
+      min-height: 245px;
     }
     .trends-card:nth-child(n+2) {
       margin-left: 0;
@@ -741,16 +754,31 @@
       margin-bottom: 5px;
     }
     .trends-card-content {
-      padding: 10%;   
+      padding: 8% 10%;   
+    }
+    .trends-card-content-title-link {
+      font-size: 16px;
     }
     .page-wrap {
       padding: 0 35px;
+    }
+    .main-wrap {
+      padding: 0;
     }
     .card {
       flex-wrap: wrap;
       max-width: 100%;
     }
-
+    .card:not(:last-child)::after {
+      content:"";
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 20px;
+      width: 100%;
+      height: 3px;
+      background:#eeeeee;
+      }
     .card-preview {
       width: 100%;
     }
@@ -765,6 +793,10 @@
     .card-content-title, .card-tag, .card-content-meta {
       width: 100%;
     }
+    .card-content-title {
+      font-size: 18px;
+    }
+
     .sidebar {
       margin-left: 35px;
     }
@@ -772,9 +804,15 @@
       flex-wrap: wrap;
     }
     .shop-card {
-      width: 45%;
+      width: calc(50% - 40px);
       margin-bottom: 48px;
     }   
+    .socials-wrap {
+      margin-top: 20px;
+    }
+    .copyright {
+      margin-top: 43px;
+    }
   }
   /*------------------amedia TABLET Landscape--------------------*/
     @media (orientation: landscape) {
@@ -811,11 +849,14 @@
       min-height: 640px;
       background-image: url("../images/banner-mobile.jpg");
       padding: 30px 15px 0 15px;
+      margin-bottom: 35px;
     }
     .header-top {
       width: 100%;
       flex-wrap: nowrap;
       justify-content: end;
+      align-items: flex-start;
+      padding: 0px;
     }
     
     .menu-list {
@@ -831,25 +872,31 @@
 
     .header-title {
       width: 100%;
-      padding: 0 30px 0 30px;
+      margin-top: 135px;
+      line-height: 1.48;
     }
     .header-logo-mobile {
-      margin-bottom: 45px;
+      margin-bottom: 22px;
       max-width: 270px;
     }
-
     h1 {
      font-size: 26px;
     }
+    .section-title {
+      font-size: 16px;
+    }
     .trends-container {
       flex-wrap: wrap;
-      padding: 1.65em;
+      margin-bottom: 45px;
     }
     .trends-card {
       width: 100%;
-      padding 0 15px 15px 15px;
+      padding: 0 15px 15px 15px;
       margin-bottom: 3px;
       min-height: 230px;
+    }
+    .trends-card:last-child {
+      margin-bottom: 0px;
     }
     .trends-card:nth-child(n+2) {
       margin-left: 0;
@@ -860,8 +907,9 @@
     .card {
       flex-wrap: wrap;
       max-width: 100%;
+      margin-bottom: 30px;
     }
-    .card::after {
+    .card:not(:last-child)::after {
     content:"";
     display: block;
     margin-left: auto;
@@ -878,6 +926,7 @@
     }
     .card-preview {
       width: 100%;
+      padding-top: 0;
     }
     .card-preview-img {
       width: 100%;
@@ -888,12 +937,26 @@
     .card-content-title, .card-tag, .card-content-meta {
       width: 100%;
     }
+    .card-content-title {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    .card-content-meta {
+      margin-bottom: 12px;
+    }
     .main-wrap {
       flex-wrap: wrap;
+      padding: 0 13px;
     }
     .sidebar {
       width: 100%;
-      margin-top: 45px;
+      margin-top: 60px;
+    }
+    .sidebar-header-title {
+      font-size: 16px;
+    }
+    .search {
+      margin-bottom: 40px;
     }
     .search-form {
       width: 100%;
@@ -901,11 +964,24 @@
     .search-input {
       width: 100%;
     }
+    .email {
+      margin-bottom: 40px;
+    }
     .email-input {
       width: 100%;
     }
     .email-button {
       width: 100%;
+    }
+    .sidebar-tags {
+      margin-bottom: 40px;
+    }
+    .sidebar-tag-item {
+      padding: 3px 13px;
+      margin: 5px 5px 0 0;
+    }
+    .shop {
+      margin: 40px auto 0 auto;
     }
     .shop-container {
       flex-wrap: wrap;
@@ -913,10 +989,17 @@
     .shop-card {
       width: 100%;
       margin: 0 20px 48px 20px;
+    }
+    .shop-card-content {
+      min-height: 180px;
+    }
+    .socials-wrap {
+      margin-top: 20px;
+    }
+    .copyright {
+      margin-top: 43px;
+    }
 
-
-
-  }
 }
 
 /*-------------------amedia MOBILE Landscape-------------------*/
